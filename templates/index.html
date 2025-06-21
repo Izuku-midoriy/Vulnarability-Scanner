@@ -1,20 +1,76 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Simple Vulnerability Scanner</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            padding: 40px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        form {
+            margin-bottom: 30px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #0077cc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        button:hover {
+            background-color: #005fa3;
+        }
+
+        .message {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #444;
+        }
+
+        .filename {
+            margin-top: 10px;
+            color: #0077cc;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
+
     <h1>Simple Vulnerability Scanner</h1>
+
     <form method="POST">
-        <input type="text" name="target" placeholder="Enter target (e.g., example.com)" required>
+        <input type="text" name="target" placeholder="Enter target (e.g., example.com)">
         <button type="submit">Scan</button>
     </form>
 
     {% if message %}
-        <p>{{ message }}</p>
+        <div class="message">{{ message }}</div>
+        {% if result_file %}
+            <div class="filename">Result saved as: {{ result_file }}</div>
+        {% endif %}
     {% endif %}
-    {% if result_file %}
-        <p>Result saved as: {{ result_file }}</p>
-    {% endif %}
+
 </body>
 </html>
