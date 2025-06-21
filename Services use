@@ -1,0 +1,26 @@
+ SERVICES USED IN THE PROJECT
+🖥️ 1. Flask (Python Web Framework)
+      What it does: Handles HTTP requests and serves your web UI.
+
+Used for: Building the form, receiving target URLs, and rendering the result messages.
+
+🌐 2. Requests (Python Library)
+      What it does: Sends HTTP GET requests to the target websites.
+      
+Used for: Fetching the HTTP status code and response headers from the user-input URL.
+
+☁️ 3. Google Cloud Storage (GCS)
+      What it does: Cloud-based object storage (like AWS S3).
+
+Used for: Saving the scan result files (.txt) that your Flask app generates.
+
+🧠 4. Google Cloud Client Library for Storage
+       What it does: Python SDK to interact with GCS buckets.
+
+Used for: Uploading files from /tmp/ to your simple-vuln-results bucket.
+
+⚙️ 5. Google Cloud Run
+      What it does: Serverless container platform to deploy and run web apps.
+
+Used for: Hosting your Flask app on the internet without needing a server or Dockerfile (via buildpacks).
+
