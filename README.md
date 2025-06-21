@@ -1,4 +1,4 @@
-# 🔍 Cloud Based Vulnerability Scanner
+# 🔍 Simple Vulnerability Scanner
 
 This is a lightweight web-based vulnerability scanner that allows users to enter a URL and scan it for basic HTTP header information. The scan results are saved to a Google Cloud Storage bucket and accessible through a clean web UI.
 
