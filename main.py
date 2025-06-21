@@ -5,7 +5,7 @@ from google.cloud import storage
 
 app = Flask(__name__)
 client = storage.Client()
-bucket = client.bucket("simple-vuln-results")  # Change to your bucket name
+bucket = client.bucket("vulnarability-results")  # Change to your bucket name
 
 @app.route("/", methods=["GET", "POST"])
 def index():
