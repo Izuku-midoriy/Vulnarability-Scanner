@@ -9,7 +9,7 @@ from datetime import datetime
 app = Flask(__name__)
 
 
-bucket_name = "simple-vuln-results"
+bucket_name = "simple-vuln-result"
 client = storage.Client()
 bucket = client.bucket(bucket_name)
 
