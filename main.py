@@ -26,7 +26,7 @@ def index():
 
         # Extract domain for naming
         parsed_url = urlparse(target)
-        domain = parsed_url.netloc.replace(":", "_").replace(".", "_")  # Avoid invalid characters
+        domain = parsed_url.netloc.replace(":", "_").replace(".", "_")  #  It helps to avoid invalid characters
 
         # Timestamp to keep file unique
         timestamp = datetime.utcnow().strftime("%Y%m%dT%H%M%SZ")
